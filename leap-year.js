@@ -1,15 +1,15 @@
 // leap year
 
-function leapYear(year) {
+function leapYear(years) {
 
-    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    return (years % 4 === 0 && years % 100 !== 0 && years % 400 === 0);
 }
 
 function array(yearsArray) {
     const arrayAdd = [];
-    for ( const year of yearsArray) {
-        if (leapYear(year)) {
-            arrayAdd.push(year);
+    for ( const years of yearsArray) {
+        if (leapYear(years)) {
+            arrayAdd.push(years);
         }
     }
     return arrayAdd;
