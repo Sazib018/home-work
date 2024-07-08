@@ -1,20 +1,17 @@
 // leap year
 
-function leapYear(year) {
-    return (year % 4 == 0 && year % 100 !== 0) || (year % 400 == 0);
-}
+function leapYears(year) {
+    let leapYear =[];
 
-function cheakLeapYears(yearsArray) {
-    const leapYears = [];
-    for (const year of yearsArray) {
-        if (leapYear(year)) {
-            leapYears.push(year);
-        }
+for (let i = 0; i < year.length; i++) {
+    const element = year[i];
+    if (element % 4 ==0) {
+       leapYear.push (element); 
     }
-    return leapYears;
+    
+}
+return leapYear;
 }
 
-const inputYears = [2023, 2024, 2025, 2028, 2030];
-const leapYearsArray = cheakLeapYears(inputYears);
-
-console.log("leap years:", leapYearsArray);
+const year =[2020, 2022, 2024, 2026, 2028, 2030];
+console.log(leapYears(year));
